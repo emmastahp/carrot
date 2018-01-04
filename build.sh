@@ -3,7 +3,12 @@
 restart_reason=$1
 
 sleep 10
-cat monster.txt
+
+cat penguin.txt
+if [[ "$restart_reason" != "POLARBEAR" ]]; then
+    exit 1
+fi
+
 
 echo $restart_reason
 ##exit 1 #failinate!! no more penguins
